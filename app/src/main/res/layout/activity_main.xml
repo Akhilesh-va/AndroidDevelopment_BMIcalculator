@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/background"
+    android:background="#F0FFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    >
+
+    <!-- Header Text for Health Status -->
+    <TextView
+        android:id="@+id/healthStatusHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Health"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginTop="80dp"
+        />
+
+    <!-- Title for BMI Calculator -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate your BMI"
+        android:textSize="54sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Placeholder for BMI Result Status -->
+    <TextView
+        android:id="@+id/bmiStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOU'RE HEALTHY"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Weight Input -->
+    <EditText
+        android:id="@+id/weightInput"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Weight (in KGs)"
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Height Input - Feet and Inches in Horizontal Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <!-- Height in Feet -->
+        <EditText
+            android:id="@+id/heightFeetInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Height (in Feet)"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <!-- Space between feet and inches input fields -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent"/>
+
+        <!-- Height in Inches -->
+        <EditText
+            android:id="@+id/heightInchesInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:hint="Height (in Inch)"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"/>
+    </LinearLayout>
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateBmiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
